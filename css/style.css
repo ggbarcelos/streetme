@@ -169,25 +169,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .highlight-text {
-    color: var(--secondary-color);
+    color: rgba(199, 161, 122, 0.9);
     display: block;
     font-size: 4rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    animation: glow 2s ease-in-out infinite alternate;
+    background: linear-gradient(120deg,
+        rgba(199, 161, 122, 0.2) 0%,
+        rgba(199, 161, 122, 0.85) 35%,
+        rgba(255, 235, 210, 0.35) 50%,
+        rgba(199, 161, 122, 0.85) 65%,
+        rgba(199, 161, 122, 0.2) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 6px rgba(199, 161, 122, 0.15);
+    background-size: 220% 100%;
+    animation: shimmer 4.5s ease-in-out infinite;
 }
 
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px var(--secondary-color),
-                     0 0 20px var(--secondary-color),
-                     0 0 30px var(--secondary-color);
-    }
-    to {
-        text-shadow: 0 0 20px var(--secondary-color),
-                     0 0 30px var(--secondary-color),
-                     0 0 40px var(--secondary-color);
-    }
+@keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .hero-subtitle {
