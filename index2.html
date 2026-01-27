@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreetMe - Franquia Premium de Café | Invista no Futuro</title>
+    <meta name="description" content="Design minimalista e elegante. Invista na franquia de café premium mais desejada do Brasil.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2C1810;
+            --secondary: #C7A17A;
+            --accent: #F5EBE0;
+            --dark: #1a0f0a;
+            --light: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            background: var(--light);
+            overflow-x: hidden;
+            padding-top: 72px; /* espaço para o topo fixo */
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Header Minimal */
+        .minimal-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1200;
+            background: linear-gradient(90deg, rgba(44,24,16,0.95), rgba(44,24,16,0.85));
+            backdrop-filter: blur(8px);
+            padding: 0.85rem 0;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+        }
+
+        .minimal-header .logo-mark {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--light);
+            text-transform: uppercase;
+        }
+
+        .minimal-header .tagline {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.8);
+            letter-spacing: 1px;
+        }
+
+        .minimal-header .minimal-cta {
+            padding: 0.6rem 1.2rem;
+            border: 1px solid rgba(199,161,122,0.6);
+            border-radius: 999px;
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            background: rgba(199,161,122,0.16);
+        }
+
+        .minimal-header .minimal-cta:hover {
+            background: var(--secondary);
+            color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+        
+        /* Sidebar Navigation */
+        .sidebar-nav {
+            position: fixed;
+            right: 3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+        
+        .sidebar-nav a {
+            display: block;
+            width: 12px;
+            height: 12px;
+            background: var(--secondary);
+            border-radius: 50%;
+            margin: 1.5rem 0;
+            transition: all 0.3s;
+            opacity: 0.5;
+        }
+        
+        .sidebar-nav a:hover,
+        .sidebar-nav a.active {
+            opacity: 1;
+            transform: scale(1.5);
+        }
+        
+        /* Hero Split Screen */
+        .hero-split {
+            height: 100vh;
+            display: flex;
+        }
+        
+        .hero-left {
+            width: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem;
+            color: var(--light);
+        }
+        
+        .hero-right {
+            width: 50%;
+            background: url('img/produtos/Tezza-3210.jpg') center/cover;
+            position: relative;
+        }
+        
+        .hero-right::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(44, 24, 16, 0.3), transparent);
+        }
+        
+        .hero-content h1 {
+            font-size: 5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-content .highlight {
+            color: var(--secondary);
+            display: block;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-box h3 {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-box p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .cta-primary {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--secondary);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            margin-top: 2rem;
+        }
+        
+        .cta-primary:hover {
+            background: var(--light);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        /* Fullscreen Sections */
+        .section-full {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 6rem 0;
+        }
+        
+        #produtos {
+            padding-top: 2rem;
+        }
+        
+        .section-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.7;
+            font-weight: 300;
+        }
+        
+        /* Minimal Cards */
+        .minimal-card {
+            padding: 3rem;
+            border: 1px solid #e0e0e0;
+            transition: all 0.4s;
+            height: 100%;
+            background: var(--light);
+        }
+        
+        .minimal-card:hover {
+            border-color: var(--secondary);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+        }
+        
+        .minimal-card h3 {
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary);
+        }
+        
+        .minimal-card .icon {
+            font-size: 3rem;
+            color: var(--secondary);
+        }
+        
+        /* Image Grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+        
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+        
+        .grid-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .grid-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.4s;
+        }
+        
+        .grid-item:hover .overlay {
+            transform: translateY(0);
+        }
+        
+        /* Investment Section */
+        .investment-box {
+            background: var(--primary);
+            color: var(--light);
+            padding: 6rem;
+            text-align: center;
+        }
+        
+        .investment-value {
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--secondary);
+            line-height: 1;
+            margin: 2rem 0;
+        }
+        
+        .investment-list {
+            text-align: left;
+            max-width: 600px;
+            margin: 3rem auto;
+        }
+        
+        .investment-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 1.1rem;
+        }
+        
+        /* Timeline Modern */
+        .timeline-modern {
+            position: relative;
+            max-width: 1200px;
+            margin: 4rem auto;
+        }
+        
+        .timeline-step {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .step-number {
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--secondary);
+            opacity: 0.2;
+            line-height: 1;
+        }
+        
+        .step-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Contact Section */
+        .contact-split {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        .contact-info {
+            width: 40%;
+            background: var(--primary);
+            color: var(--light);
+            padding: 6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .contact-form {
+            width: 60%;
+            padding: 6rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .form-minimal {
+            width: 100%;
+        }
+        
+        .form-minimal input,
+        .form-minimal select,
+        .form-minimal textarea {
+            width: 100%;
+            padding: 1rem 0;
+            border: none;
+            border-bottom: 2px solid #e0e0e0;
+            background: transparent;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s;
+        }
+        
+        .form-minimal input:focus,
+        .form-minimal select:focus,
+        .form-minimal textarea:focus {
+            outline: none;
+            border-bottom-color: var(--secondary);
+        }
+        
+        .form-minimal label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.7;
+        }
+        
+        .btn-submit {
+            width: 100%;
+            padding: 1.5rem;
+            background: var(--primary);
+            color: var(--light);
+            border: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-submit:hover {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+        
+        /* Footer Minimal */
+        .footer-minimal {
+            background: var(--dark);
+            color: var(--light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .footer-minimal .brand {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .social-minimal a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            line-height: 50px;
+            margin: 0 0.5rem;
+            color: var(--light);
+            transition: all 0.3s;
+        }
+        
+        .social-minimal a:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
+            transform: translateY(-5px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-split {
+                flex-direction: column;
+            }
+            
+            .hero-left,
+            .hero-right {
+                width: 100%;
+                min-height: 55vh;
+            }
+            
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            
+            .contact-split {
+                flex-direction: column;
+            }
+            
+            .contact-info,
+            .contact-form {
+                width: 100%;
+            }
+            
+            .sidebar-nav {
+                display: none;
+            }
+            
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+                padding-top: 64px;
+            }
+
+            .section-full {
+                min-height: auto;
+                padding: 4rem 0;
+            }
+
+            .minimal-header {
+                padding: 0.75rem 0;
+            }
+
+            .minimal-header .logo-mark {
+                font-size: 1.4rem;
+            }
+
+            .minimal-header .minimal-cta {
+                padding: 0.55rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero-left {
+                padding: 3rem 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.4rem;
+                line-height: 1.2;
+            }
+
+            .hero-content p {
+                font-size: 1.05rem;
+                line-height: 1.6;
+            }
+
+            .mini-card {
+                padding: 1.5rem;
+                gap: 0.5rem;
+            }
+
+            .section-title {
+                font-size: 2.1rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+
+            .contact-split {
+                gap: 2rem;
+            }
+
+            .contact-form,
+            .contact-info {
+                padding: 2rem 1.5rem;
+            }
+
+            .image-grid {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            body {
+                padding-top: 58px;
+            }
+
+            .minimal-header {
+                padding: 0.65rem 0;
+            }
+
+            .minimal-header .tagline {
+                display: none;
+            }
+
+            .minimal-header .logo-mark {
+                font-size: 1.25rem;
+            }
+
+            .minimal-header .minimal-cta {
+                padding: 0.5rem 0.9rem;
+                font-size: 0.85rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 0.95rem;
+            }
+
+            .section-full {
+                padding: 3rem 0;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .image-grid img {
+                height: 260px;
+            }
+
+            .minimal-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .minimal-card p {
+                font-size: 0.95rem;
+            }
+
+            .cta-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .contact-form button {
+                width: 100%;
+            }
+        }
+        
+        /* Scroll Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--secondary);
+            z-index: 9999;
+            transition: width 0.1s;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-minimal {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+            z-index: 999;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-minimal:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+        
+        /* Historia Section */
+        .historia-timeline {
+            position: relative;
+            padding: 3rem 0;
+        }
+        
+        .historia-item {
+            margin-bottom: 5rem;
+            position: relative;
+        }
+        
+        .historia-year {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            opacity: 0.3;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+        
+        .historia-content-box {
+            background: white;
+            padding: 2.5rem;
+            border-left: 3px solid var(--secondary);
+            transition: all 0.3s;
+        }
+        
+        .historia-content-box:hover {
+            border-left-color: var(--primary);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .historia-content-box h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .historia-content-box p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .historia-image {
+            height: 400px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .mission-card-minimal {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-top: 3px solid var(--secondary);
+            transition: all 0.3s;
+        }
+        
+        .mission-card-minimal:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .mission-card-minimal i {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .mission-card-minimal h5 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .mission-card-minimal p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <!-- Minimal Header -->
+    <header class="minimal-header">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="d-flex flex-column">
+                <span class="logo-mark">StreetMe</span>
+                <span class="tagline">Franquia de café premium</span>
+            </div>
+            <a href="#contato" class="minimal-cta">Quero investir</a>
+        </div>
+    </header>
+    
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+        <a href="#hero" class="active"></a>
+        <a href="#about"></a>
+        <a href="#historia"></a>
+        <a href="#produtos"></a>
+        <a href="#investimento"></a>
+        <a href="#processo"></a>
+        <a href="#contato"></a>
+    </nav>
+    
+    <!-- Hero Split Screen -->
+    <section id="hero" class="hero-split">
+        <div class="hero-left">
+            <div class="hero-content" data-aos="fade-right">
+                <h1>
+                    Invista em<br>
+                    <span class="highlight">Café Premium</span>
+                </h1>
+                <p style="font-size: 1.2rem; line-height: 1.8; opacity: 0.9;">
+                    Transforme seu futuro com a franquia de cafeteria mais lucrativa do Brasil. 
+                    Modelo validado, processos eficientes, resultados comprovados.
+                </p>
+                <a href="#contato" class="cta-primary">Quero Investir</a>
+                
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <h3>50+</h3>
+                        <p>Unidades</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>R$ 1M</h3>
+                        <p>Faturamento/Ano</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>18</h3>
+                        <p>Meses Payback</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right"></div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="section-full" style="background: var(--accent);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <h2 class="section-title">StreetMe</h2>
+                    <p class="section-subtitle">Excelência em cada xícara</p>
+                    <p style="font-size: 1.1rem; line-height: 1.9; margin-top: 2rem;">
+                        A StreetMe não é apenas uma cafeteria. Somos uma experiência sensorial completa 
+                        que une cafés de origem selecionada, ambiente sofisticado e uma operação 
+                        meticulosamente estruturada para garantir o sucesso de cada franqueado.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9;">
+                        Com mais de 50 unidades em operação e um modelo de negócio testado e aprovado, 
+                        oferecemos a segurança que você precisa para investir com confiança no mercado 
+                        de cafés premium.
+                    </p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="img/produtos/Tezza-4890.jpg" alt="StreetMe" style="width: 100%; border-radius: 0;">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Historia Section -->
+    <section id="historia" class="section-full">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Nossa História</h2>
+                <p class="section-subtitle">Uma trajetória de paixão pelo café e excelência</p>
+            </div>
+            
+            <div class="historia-timeline">
+                <!-- 2018 -->
+                <div class="historia-item" data-aos="fade-up">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 order-lg-1 order-2">
+                            <div class="historia-year">2018</div>
+                            <div class="historia-content-box">
+                                <h3>O Início de Tudo</h3>
+                                <p>A StreetMe nasceu da paixão de empreendedores visionários que identificaram uma oportunidade única no mercado brasileiro: oferecer uma experiência premium de café acessível em locais estratégicos.</p>
+                                <p>Com uma receita exclusiva e um conceito inovador, a primeira unidade foi inaugurada em São Paulo, conquistando imediatamente o público local.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
+                            <img src="img/produtos/IMG_2432.jpeg" alt="Início StreetMe" class="historia-image" data-aos="zoom-in">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2020 -->
+                <div class="historia-item" data-aos="fade-up">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 order-2 mb-4 mb-lg-0">
+                            <img src="img/produtos/IMG_0340.jpg" alt="Expansão StreetMe" class="historia-image" data-aos="zoom-in">
+                        </div>
+                        <div class="col-lg-6 order-1">
+                            <div class="historia-year">2020</div>
+                            <div class="historia-content-box">
+                                <h3>Expansão e Consolidação</h3>
+                                <p>Com o sucesso da primeira unidade, iniciamos nossa jornada de expansão. Mesmo em um período desafiador, a StreetMe se destacou pela resiliência e inovação.</p>
+                                <p>Nossa rede cresceu para mais de 20 lojas, consolidando a marca em diferentes regiões e provando a solidez do modelo de negócio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2022 -->
+                <div class="historia-item" data-aos="fade-up">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 order-lg-1 order-2">
+                            <div class="historia-year">2022</div>
+                            <div class="historia-content-box">
+                                <h3>Modelo de Franquia</h3>
+                                <p>Após validar nosso modelo operacional e alcançar resultados consistentes, demos início ao programa de franquias. Nossa missão era permitir que empreendedores realizassem o sonho de ter o próprio negócio.</p>
+                                <p>Desenvolvemos um sistema completo de treinamento, suporte operacional e marketing para garantir o sucesso de cada franqueado.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
+                            <img src="img/produtos/IMG_2567.PNG" alt="Franquias StreetMe" class="historia-image" data-aos="zoom-in">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2026 -->
+                <div class="historia-item" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="historia-year">2026</div>
+                            <div class="historia-content-box">
+                                <h3>O Presente e o Futuro</h3>
+                                <p>Hoje, a StreetMe é referência no segmento de cafeterias premium, com presença em mais de 20 cidades e uma base sólida de clientes fiéis. Nossa rede de franqueados cresce continuamente, com histórias de sucesso que nos motivam a ir ainda mais longe.</p>
+                                <p>Mantemos o foco na inovação constante do cardápio, na excelência do atendimento e na sustentabilidade da cadeia produtiva.</p>
+                                <p><strong>Nosso compromisso é continuar crescendo de forma sustentável, levando a experiência premium do café brasileiro para cada vez mais pessoas.</strong></p>
+                                
+                                <div class="mission-grid">
+                                    <div class="mission-card-minimal" data-aos="fade-up" data-aos-delay="100">
+                                        <i class="fas fa-bullseye"></i>
+                                        <h5>Missão</h5>
+                                        <p>Proporcionar experiências memoráveis através de cafés premium e atendimento excepcional.</p>
+                                    </div>
+                                    <div class="mission-card-minimal" data-aos="fade-up" data-aos-delay="200">
+                                        <i class="fas fa-eye"></i>
+                                        <h5>Visão</h5>
+                                        <p>Ser a rede de cafeterias premium mais admirada e desejada do Brasil.</p>
+                                    </div>
+                                    <div class="mission-card-minimal" data-aos="fade-up" data-aos-delay="300">
+                                        <i class="fas fa-heart"></i>
+                                        <h5>Valores</h5>
+                                        <p>Excelência, Inovação, Sustentabilidade e Valorização das Pessoas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products Grid -->
+    <section id="produtos" class="section-full">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Cardápio Premium</h2>
+                <p class="section-subtitle">Do clássico ao contemporâneo</p>
+            </div>
+            
+            <div class="image-grid">
+                <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="img/produtos/01.jpg" alt="Produto 1">
+                    <div class="overlay">
+                        <h4>Cafés Especiais</h4>
+                        <p>Grãos selecionados de origem</p>
+                    </div>
+                </div>
+                <div class="grid-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="img/produtos/02.jpg" alt="Produto 2">
+                    <div class="overlay">
+                        <h4>Bebidas Geladas</h4>
+                        <p>Refrescância e sabor</p>
+                    </div>
+                </div>
+                <div class="grid-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="img/produtos/03.jpg" alt="Produto 3">
+                    <div class="overlay">
+                        <h4>Gastronomia</h4>
+                        <p>Do doce ao salgado</p>
+                    </div>
+                </div>
+                <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="img/produtos/04.jpg" alt="Produto 4">
+                    <div class="overlay">
+                        <h4>Refeições</h4>
+                        <p>Opções completas</p>
+                    </div>
+                </div>
+                <div class="grid-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="img/produtos/05.jpg" alt="Produto 5">
+                    <div class="overlay">
+                        <h4>Sobremesas</h4>
+                        <p>Finalização perfeita</p>
+                    </div>
+                </div>
+                <div class="grid-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="img/produtos/06.jpg" alt="Produto 6">
+                    <div class="overlay">
+                        <h4>Experiências</h4>
+                        <p>Momentos únicos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Diferenciais -->
+    <section class="section-full" style="background: var(--accent);">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Por que StreetMe?</h2>
+                <p class="section-subtitle">Diferenciais que garantem seu sucesso</p>
+            </div>
+            
+            <div class="row g-4 mt-5">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="minimal-card">
+                        <i class="fas fa-award icon"></i>
+                        <h3>Marca Consolidada</h3>
+                        <p>Reconhecimento nacional com presença em mais de 20 cidades brasileiras</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="minimal-card">
+                        <i class="fas fa-cogs icon"></i>
+                        <h3>Sistema Validado</h3>
+                        <p>Processos testados e comprovados em dezenas de operações bem-sucedidas</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="minimal-card">
+                        <i class="fas fa-chart-line icon"></i>
+                        <h3>Alta Rentabilidade</h3>
+                        <p>Margens superiores a 40% com retorno do investimento em 18-24 meses</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="minimal-card">
+                        <i class="fas fa-hands-helping icon"></i>
+                        <h3>Suporte Total</h3>
+                        <p>Acompanhamento completo desde a escolha do ponto até o pós-inauguração</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="minimal-card">
+                        <i class="fas fa-graduation-cap icon"></i>
+                        <h3>Treinamento</h3>
+                        <p>Capacitação completa para você e sua equipe operarem com excelência</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="minimal-card">
+                        <i class="fas fa-star icon"></i>
+                        <h3>Qualidade Premium</h3>
+                        <p>Produtos de altíssima qualidade que conquistam e fidelizam clientes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Investment -->
+    <section id="investimento" class="investment-box" data-aos="fade-up">
+        <h2 style="font-size: 3rem; color: var(--light);">Investimento</h2>
+        <div class="investment-value">R$ 250 mil</div>
+        <p style="opacity: 0.7;">Investimento inicial a partir de</p>
+        
+        <ul class="investment-list">
+            <li><i class="fas fa-check" style="color: var(--secondary); margin-right: 1rem;"></i> Taxa de franquia completa</li>
+            <li><i class="fas fa-check" style="color: var(--secondary); margin-right: 1rem;"></i> Projeto arquitetônico personalizado</li>
+            <li><i class="fas fa-check" style="color: var(--secondary); margin-right: 1rem;"></i> Enxoval completo de produtos</li>
+            <li><i class="fas fa-check" style="color: var(--secondary); margin-right: 1rem;"></i> Mobiliário e equipamentos</li>
+            <li><i class="fas fa-check" style="color: var(--secondary); margin-right: 1rem;"></i> Identidade visual da unidade</li>
+            <li><i class="fas fa-check" style="color: var(--secondary); margin-right: 1rem;"></i> Marketing de inauguração</li>
+            <li><i class="fas fa-check" style="color: var(--secondary); margin-right: 1rem;"></i> Treinamento operacional completo</li>
+        </ul>
+        
+        <div style="margin-top: 3rem;">
+            <p><strong>Royalties:</strong> R$ 2.500 mensais fixos</p>
+            <p><strong>Área mínima:</strong> 40m²</p>
+            <p><strong>Margem de lucro:</strong> Até 40%</p>
+            <p><strong>Payback:</strong> 18 a 24 meses</p>
+        </div>
+        
+        <a href="#contato" class="cta-primary" style="margin-top: 3rem;">Solicitar Proposta</a>
+    </section>
+    
+    <!-- Processo -->
+    <section id="processo" class="section-full">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Processo Simples</h2>
+                <p class="section-subtitle">Do cadastro à inauguração</p>
+            </div>
+            
+            <div class="timeline-modern">
+                <div class="timeline-step" data-aos="fade-right">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Cadastro e Análise</h3>
+                        <p>Preencha o formulário e nossa equipe analisa seu perfil de investidor.</p>
+                    </div>
+                </div>
+                <div class="timeline-step" data-aos="fade-left">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Apresentação do Modelo</h3>
+                        <p>Conheça em detalhes o negócio, números e projeções financeiras.</p>
+                    </div>
+                </div>
+                <div class="timeline-step" data-aos="fade-right">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Escolha do Ponto</h3>
+                        <p>Apoio especializado na seleção e aprovação do ponto comercial.</p>
+                    </div>
+                </div>
+                <div class="timeline-step" data-aos="fade-left">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Implantação</h3>
+                        <p>Acompanhamento completo da obra, montagem e treinamento.</p>
+                    </div>
+                </div>
+                <div class="timeline-step" data-aos="fade-right">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <h3>Inauguração</h3>
+                        <p>Suporte total na abertura e nos primeiros meses de operação.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Split -->
+    <section id="contato" class="contact-split">
+        <div class="contact-info" data-aos="fade-right">
+            <h2 style="font-size: 3rem; margin-bottom: 2rem;">Vamos Conversar?</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9;">
+                Preencha o formulário ao lado e nossa equipe entrará em contato 
+                para apresentar todos os detalhes desta oportunidade única.
+            </p>
+            
+            <div style="margin-top: 4rem;">
+                <p><i class="fas fa-phone" style="margin-right: 1rem; color: var(--secondary);"></i> (11) 9999-9999</p>
+                <p><i class="fas fa-envelope" style="margin-right: 1rem; color: var(--secondary);"></i> contato@streetme.com.br</p>
+                <p><i class="fas fa-map-marker-alt" style="margin-right: 1rem; color: var(--secondary);"></i> São Paulo, SP</p>
+            </div>
+        </div>
+        
+        <div class="contact-form" data-aos="fade-left">
+            <form class="form-minimal" id="contactForm">
+                <div class="mb-4">
+                    <label>Nome Completo *</label>
+                    <input type="text" required>
+                </div>
+                <div class="mb-4">
+                    <label>E-mail *</label>
+                    <input type="email" required>
+                </div>
+                <div class="mb-4">
+                    <label>Telefone/WhatsApp *</label>
+                    <input type="tel" required>
+                </div>
+                <div class="mb-4">
+                    <label>Cidade *</label>
+                    <input type="text" required>
+                </div>
+                <div class="mb-4">
+                    <label>Capital Disponível *</label>
+                    <select required>
+                        <option value="">Selecione...</option>
+                        <option>R$ 250 a 350 mil</option>
+                        <option>R$ 350 a 500 mil</option>
+                        <option>Acima de R$ 500 mil</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label>Mensagem (opcional)</label>
+                    <textarea rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Solicitação</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer-minimal">
+        <div class="brand">StreetMe</div>
+        <p style="opacity: 0.7; margin-bottom: 2rem;">Mais do que café, uma experiência premium</p>
+        
+        <div class="social-minimal">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        
+        <p style="margin-top: 3rem; opacity: 0.5; font-size: 0.9rem;">&copy; 2026 StreetMe. Todos os direitos reservados.</p>
+    </footer>
+    
+    <!-- WhatsApp -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-minimal" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        
+        // Scroll progress
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.querySelector('.progress-bar').style.width = scrolled + '%';
+        });
+        
+        // Sidebar nav active
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.sidebar-nav a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // Form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Obrigado! Entraremos em contato em breve.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
