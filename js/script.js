@@ -273,7 +273,7 @@ createScrollIndicator();
 // Investment Calculator (Optional Feature)
 const createInvestmentCalculator = () => {
     const calculator = {
-        initialInvestment: 250000,
+        initialInvestment: 180000,
         monthlyRevenue: 60000,
         monthlyExpenses: 35000,
         royalty: 2500,
@@ -296,7 +296,7 @@ const createInvestmentCalculator = () => {
 
 // Console Welcome Message
 console.log('%c🚀 Bem-vindo à StreetMe!', 'font-size: 24px; font-weight: bold; color: #6F4E37;');
-console.log('%c☕ Invista no futuro do café premium no Brasil', 'font-size: 16px; color: #D4A574;');
+console.log('%c☕ Invista no futuro dos cafés especiais no Brasil', 'font-size: 16px; color: #D4A574;');
 console.log('%cInteressado em se tornar um franqueado? Acesse: #contato', 'font-size: 14px; color: #8B6F47;');
 
 // Preload Critical Images
