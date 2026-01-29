@@ -1,821 +1,988 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carol Fontanella | Terapia Integrativa</title>
-  
-  <!-- Open Graph Meta Tags para Redes Sociais -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Carol Fontanella • Terapeuta Integrativa">
-  <meta property="og:description" content="Terapeuta integrativa especialista em leitura vibracional. Sessões terapêuticas que combinam técnicas integrativas, psicanálise e terapia sistêmica. Transforme sua energia e desbloqueie seu potencial.">
-  <meta property="og:image" content="./img/Carol/foto1.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="1200">
-  <meta property="og:image:alt" content="Carol Fontanella - Terapeuta Integrativa">
-  <meta property="og:locale" content="pt_BR">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Carol Fontanella • Terapeuta Integrativa">
-  <meta name="twitter:description" content="Equilíbrio emocional e energético para uma vida mais leve. Sessões personalizadas de terapia vibracional.">
-  <meta name="twitter:image" content="./img/Carol/foto1.jpg">
-  <meta name="twitter:image:alt" content="Carol Fontanella">
-  
-  <!-- Meta Description para SEO -->
-  <meta name="description" content="Carol Fontanella • Terapeuta Integrativa. Terapia Vibracional para ansiedade, autoestima e propósito. Sessões individuais personalizadas e programas de reprogramação energética.">
-  <meta name="theme-color" content="#c9a6d4">
-  
-  <!-- Cache Control -->
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-IQsoLXl5PILFhosVNubqaaM8L/95bJObGtIsfRSAxEPPGjBJOCaOQGL3+rXhN0bS" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="css/style.css?v=1.0.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreetMe - Seja um Franqueado | Franquia de Cafés Especiais</title>
+    <meta name="description" content="Invista em uma das franquias de cafés especiais mais promissoras do Brasil. Construa um negócio lucrativo e sustentável com a StreetMe.">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=20260127">
 </head>
 <body>
-  <header class="sticky-top">
-    <nav class="navbar bg-brand">
-      <div class="navbar-container">
-        <a class="navbar-brand brand" href="#topo">
-          <div class="logo-wrapper">
-            <img src="img/logo.png" alt="Logo Carol Fontanella" class="navbar-logo">
-          </div>
-          <span class="navbar-title">Carol Fontanella</span>
-        </a>
-        <button class="navbar-toggler" type="button" id="navbarToggler" aria-label="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div class="navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-            <li class="nav-item"><a class="nav-link" href="#especialidades">Especialidades</a></li>
-            <li class="nav-item"><a class="nav-link" href="#programas">Programas</a></li>
-            <li class="nav-item"><a class="nav-link" href="#metodologia">Como funciona</a></li>
-            <li class="nav-item"><a class="nav-link" href="#energias">Energias da Semana</a></li>
-            <li class="nav-item"><a class="nav-link" href="#podcast">Podcast</a></li>
-            <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-          </ul>
+    
+    <!-- Floating CTA Button -->
+    <a href="#contato" class="floating-cta-btn" title="Quero Ser Franqueado">
+        <i class="fas fa-handshake"></i>
+        <span class="floating-btn-text">Quero Ser Franqueado</span>
+    </a>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">
+                <img src="img/logo.png" alt="StreetMe Logo" class="brand-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#historia">Nossa História</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#diferenciais">Diferenciais</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#investimento">Investimento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#video">Vídeo</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-nav-cta" href="#contato">Quero Ser Franqueado</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
-  </header>
 
-  <main>
-    <section class="hero" id="topo">
-      <div class="hero-content">
-        <div class="hero-header">
-          <div class="eyebrow">Terapia integrativa & vibracional</div>
-          <h1>Equilíbrio emocional e energético para uma vida mais leve.</h1>
-          <p class="hero-subtitle">Carol Fontanella conduz jornadas terapêuticas que unem técnicas integrativas, psicanálise e terapia sistêmica. Sessões personalizadas através de leituras sutis e práticas vibracionais te auxílio a desbloquear padrões, desenvolver equilíbrio emocional e fortalecer sua presença no mundo.</p>
-        </div>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#programas">Conhecer programas</a>
-          <a class="btn btn-outline" href="#contato">Falar com Carol</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="avatar-container">
-          <img class="avatar" src="img/Carol/foto1.jpg" alt="Foto de Carol Fontanella" loading="lazy">
-          <div class="avatar-ring"></div>
-          <div class="avatar-glow"></div>
-        </div>
-        <p class="tagline">"Cuidar da sua energia é cuidar da sua história."</p>
-      </div>
-    </section>
-    <section id="sobre">
-      <div class="section-inner two-col">
-        <div>
-          <span class="pill">Quem é a Carol</span>
-          <h2>Terapeuta integrativa, especialista em leitura vibracional.</h2>
-          <p style="color: var(--muted);">Formada em terapias integrativas e técnicas vibracionais, Carol atua ajudando pessoas a liberarem ansiedade, medo, crenças limitantes e dores emocionais. As sessões combinam acolhimento, escuta ativa e ferramentas energéticas para que você saia mais leve, confiante e presente.</p>
-          <ul class="list">
-            <li><i class="bi bi-stars icon-bullet"></i><span>Sessões individuais com plano personalizado.</span></li>
-            <li><i class="bi bi-heart-pulse icon-bullet"></i><span>Protocolos exclusivos para ansiedade, autoestima e relacionamentos.</span></li>
-            <li><i class="bi bi-droplet-half icon-bullet"></i><span>Integra práticas sutis, respiração, alinhamento energético e reprogramação.</span></li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Resultados que os clientes relatam</h3>
-          <div class="list">
-            <div class="list-item" style="display:flex;gap:10px;align-items:flex-start;">
-              <i class="bi bi-emoji-smile icon-bullet"></i><span>Redução de ansiedade e sensação de leveza imediata.</span>
-            </div>
-            <div class="list-item" style="display:flex;gap:10px;align-items:flex-start;">
-              <i class="bi bi-brightness-high icon-bullet"></i><span>Mais clareza mental para decisões importantes.</span>
-            </div>
-            <div class="list-item" style="display:flex;gap:10px;align-items:flex-start;">
-              <i class="bi bi-compass icon-bullet"></i><span>Reconexão com propósito, segurança interna e autoestima.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="video" class="video-section">
-      <div class="section-inner">
-        <div class="video-header">
-          <div>
-            <span class="pill">Conheça Carol</span>
-            <h2>Apresentação e abordagem terapêutica</h2>
-            <p>Neste vídeo, Carol compartilha sua metodologia, sua história e como funciona cada atendimento. Assista e conheça melhor a energia e expertise por trás de cada sessão.</p>
-          </div>
-        </div>
-        <div class="video-container">
-          <iframe 
-            width="100%" 
-            height="630" 
-            src="https://www.youtube.com/embed/7409kDClJis" 
-            title="Apresentação Carol Fontanella - Terapia Integrativa" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-    <section id="energias">
-      <div class="section-inner">
-        <div class="section-header">
-          <div>
-            <span class="pill">Energias da Semana</span>
-            <h2>Conecte-se com as energias da semana</h2>
-            <p>Ouça as previsões astrológicas e vibracionais semanais no Spotify. Descubra como aproveitar as energias do momento para seu crescimento pessoal e espiritual.</p>
-          </div>
-          <a class="btn btn-outline" href="https://open.spotify.com/show/3Ak19mSfGZGCkziUFrLmtX?si=EK6c2Z0ETMmsO8h3-6ZIqQ" target="_blank" rel="noreferrer">
-            <i class="bi bi-spotify" style="margin-right: 8px;"></i>Abrir no Spotify
-          </a>
-        </div>
-        <div style="display: flex; justify-content: center; margin-top: 2rem;">
-          <iframe 
-            style="border-radius:12px; max-width: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" 
-            src="https://open.spotify.com/embed/show/3Ak19mSfGZGCkziUFrLmtX?utm_source=generator&theme=0" 
-            width="100%" 
-            height="352" 
-            frameBorder="0" 
-            allowfullscreen="" 
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-            loading="lazy">
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section class="section-alt" id="podcast">
-      <div class="section-inner">
-        <div class="section-header">
-          <div>
-            <span class="pill">Podcast</span>
-            <h2>LibertaMENTE – últimos episódios no YouTube</h2>
-            <p>Ouça debates e reflexões sobre expansão de consciência, autoconhecimento e energia. Clique para assistir no YouTube.</p>
-          </div>
-          <a class="btn btn-outline" href="https://www.youtube.com/@projetolibertamente/videos" target="_blank" rel="noreferrer">Ver canal</a>
-        </div>
-        <div class="yt-grid" data-channel-id="UCRTpbO2ZHzeCdqNank89qBw">
-          <a class="yt-card" href="https://www.youtube.com/watch?v=Ixo30VUdeeg" target="_blank" rel="noreferrer">
-            <div class="yt-thumb" style="background-image:url('https://img.youtube.com/vi/Ixo30VUdeeg/hqdefault.jpg');">
-              <div class="yt-play"><i class="bi bi-play-circle"></i></div>
-              <div class="yt-duration">50:37</div>
-            </div>
-            <div class="yt-body">
-              <h3 class="yt-title">Previsões e energias de 2026</h3>
-              <p class="yt-desc">Reflexões sobre tendências energéticas para o ano e como se preparar emocionalmente.</p>
-              <div class="yt-meta">
-                <span class="pill">Podcast</span>
-                <span>1 mês atrás</span>
-              </div>
-            </div>
-          </a>
-          <a class="yt-card" href="https://www.youtube.com/watch?v=eErVwoLsGDg" target="_blank" rel="noreferrer">
-            <div class="yt-thumb" style="background-image:url('https://img.youtube.com/vi/eErVwoLsGDg/hqdefault.jpg');">
-              <div class="yt-play"><i class="bi bi-play-circle"></i></div>
-              <div class="yt-duration">50:48</div>
-            </div>
-            <div class="yt-body">
-              <h3 class="yt-title">Expansão da Consciência e os Desafios do Autoconhecimento</h3>
-              <p class="yt-desc">Como navegar os desafios internos enquanto amplia a percepção e a presença.</p>
-              <div class="yt-meta">
-                <span class="pill">Podcast</span>
-                <span>2 meses atrás</span>
-              </div>
-            </div>
-          </a>
-          <a class="yt-card" href="https://www.youtube.com/watch?v=MaBuHn9sVtI" target="_blank" rel="noreferrer">
-            <div class="yt-thumb" style="background-image:url('https://img.youtube.com/vi/MaBuHn9sVtI/hqdefault.jpg');">
-              <div class="yt-play"><i class="bi bi-play-circle"></i></div>
-              <div class="yt-duration">1:13:27</div>
-            </div>
-            <div class="yt-body">
-              <h3 class="yt-title">Mulher 40+</h3>
-              <p class="yt-desc">Conversas sobre ciclos, autonomia e novos começos para mulheres após os 40.</p>
-              <div class="yt-meta">
-                <span class="pill">Podcast</span>
-                <span>2 meses atrás</span>
-              </div>
-            </div>
-          </a>
-          <a class="yt-card" href="https://www.youtube.com/watch?v=nd_0NKeLgVQ" target="_blank" rel="noreferrer">
-            <div class="yt-thumb" style="background-image:url('https://img.youtube.com/vi/nd_0NKeLgVQ/hqdefault.jpg');">
-              <div class="yt-play"><i class="bi bi-play-circle"></i></div>
-              <div class="yt-duration">40:53</div>
-            </div>
-            <div class="yt-body">
-              <h3 class="yt-title">Vozes do Masculino #2</h3>
-              <p class="yt-desc">Perspectivas sobre sensibilidade, força e vulnerabilidade no universo masculino.</p>
-              <div class="yt-meta">
-                <span class="pill">Podcast</span>
-                <span>1 ano atrás</span>
-              </div>
-            </div>
-          </a>
-          <a class="yt-card" href="https://www.youtube.com/watch?v=W7s2HyzoI0E" target="_blank" rel="noreferrer">
-            <div class="yt-thumb" style="background-image:url('https://img.youtube.com/vi/W7s2HyzoI0E/hqdefault.jpg');">
-              <div class="yt-play"><i class="bi bi-play-circle"></i></div>
-              <div class="yt-duration">49:18</div>
-            </div>
-            <div class="yt-body">
-              <h3 class="yt-title">Vozes do Masculino #1</h3>
-              <p class="yt-desc">Primeiro episódio da série sobre jornadas masculinas e equilíbrio emocional.</p>
-              <div class="yt-meta">
-                <span class="pill">Podcast</span>
-                <span>1 ano atrás</span>
-              </div>
-            </div>
-          </a>
-</div>
-      </div>
-    </section>
-
-    <section class="section-alt" id="especialidades">
-      <div class="section-inner">
-        <div class="section-header">
-          <div>
-            <span class="pill">Especialidades</span>
-            <h2>Protocolos que equilibram corpo, mente e energia.</h2>
-            <p>Abordagem integrativa inspirada em terapias vibracionais, alinhamento energético, reprogramação de crenças e práticas de presença.</p>
-          </div>
-          <a class="btn btn-outline" href="#contato">Quero uma sessão</a>
-        </div>
-        <div class="grid grid-cols-3">
-          <div class="card">
-            <div class="card-icon"><i class="bi bi-wind"></i></div>
-            <h3>Ansiedade e regulação emocional</h3>
-            <p>Mapeamento de gatilhos, respiração consciente, aterramento e técnicas vibracionais para acalmar o sistema.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon"><i class="bi bi-lightning-fill"></i></div>
-            <h3>Autoconfiança e autoestima</h3>
-            <p>Reprogramação de crenças, liberação de bloqueios, fortalecimento da autoimagem e presença.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon"><i class="bi bi-hearts"></i></div>
-            <h3>Relacionamentos e vínculos</h3>
-            <p>Harmonização de padrões emocionais, comunicação consciente e equilíbrio entre dar e receber.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon"><i class="bi bi-compass"></i></div>
-            <h3>Propósito e direção</h3>
-            <p>Propósito e direção – clareza de caminhos e tomadas de decisões alinhadas com a sua essência.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon"><i class="bi bi-flower1"></i></div>
-            <h3>Gestão do estresse</h3>
-            <p>Práticas rápidas de autocuidado energético para rotina intensa.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon"><i class="bi bi-circle-fill"></i></div>
-            <h3>Cura vibracional</h3>
-            <p>Alinhamento de chakras, limpeza energética e ancoragem para sustentar mudanças.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section id="programas">
-      <div class="section-inner">
-        <div class="section-header">
-          <div>
-            <span class="pill">Programas e produtos</span>
-            <h2>Escolha o caminho que melhor acolhe seu momento.</h2>
-            <p>Planos acessíveis com suporte e materiais de apoio para você avançar com segurança.</p>
-          </div>
-        </div>
-        <div class="program-group" id="atendimentos">
-          <div class="program-group-header">
-            <div>
-              <span class="pill">Atendimentos personalizados</span>
-              <p style="color: var(--muted); margin: 6px 0 0;">Sessões síncronas por agendamento (online ou presencial), com plano feito para você.</p>
-            </div>
-            <a class="btn btn-outline" href="https://docs.google.com/forms/d/e/1FAIpQLSezHQUfsIg9CBKVTF6CndYONsTpQdEDTwt00nE2MxLRMkAZMg/viewform" target="_blank" rel="noreferrer">Agende agora</a>
-          </div>
-          <div class="programs">
-            <div class="program highlight">
-              <div class="program-icon"><i class="bi bi-person-heart"></i></div>
-              <div class="pill">Sessão individual</div>
-              <h3>Sessão Integrativa Premium</h3>
-              <p style="color: var(--muted);">Encontro presencial, alinhamento entre corpo, mente, emoção e campo energético, sessão de diagnóstico para identificar bloqueios e movimentos internos que possam estar gerando conflitos(emocionais, relacionais ou somáticos).</p>
-              <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSezHQUfsIg9CBKVTF6CndYONsTpQdEDTwt00nE2MxLRMkAZMg/viewform" target="_blank" rel="noreferrer" style="margin-top: auto;">Agende agora</a>
-            </div>
-            <div class="program">
-              <div class="program-icon"><i class="bi bi-flower2"></i></div>
-              <div class="pill">Programa 4 encontros</div>
-              <h3>Jornada Autoconhecimento e Propósito</h3>
-              <p style="color: var(--muted);">Um processo terapêutico de desenvolvimento pessoal, facilitado com as ferramentas de astrologia, numerologia, florais e terapia energética para reprogramação mental e emocional.</p>
-              <div class="expandable-content" style="display: none; margin-top: 1rem;">
-                <p style="color: var(--muted);">Um mergulho interno através de 4 encontros, individuais, presenciais ou on-line para lhe trazer consciência e expansão dos seus potenciais e habilidades.</p>
-                <p style="color: var(--muted); margin-top: 1rem;">Você descobrirá seus valores espirituais, os aprendizados e desafios que veio ter aqui na Terra, assim como as suas conquistas e realizações.</p>
-                <p style="color: var(--muted); margin-top: 1rem;"><strong>Essa jornada é para quem busca:</strong></p>
-                <ul style="margin-bottom: 1rem;">
-                  <li>Clareza sobre o propósito de vida</li>
-                  <li>Reconexão com a própria essência e espiritualidade</li>
-                  <li>Entendimento mais profundo sobre seus desafios e potenciais</li>
-                  <li>Alinhamento energético e emocional</li>
-                  <li>Transformação consciente e verdadeira</li>
-                </ul>
-                <p style="color: var(--muted); font-style: italic; font-size: 0.95rem;">Uma jornada para compreensão do seu propósito evolutivo!</p>
-              </div>
-              <div style="margin-top: auto; display: grid; gap: 0.75rem;">
-                <button class="btn btn-outline expand-toggle" style="width: 100%;" onclick="this.parentElement.previousElementSibling.style.display = this.parentElement.previousElementSibling.style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Saiba mais' ? 'Mostrar menos' : 'Saiba mais';">Saiba mais</button>
-                <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSezHQUfsIg9CBKVTF6CndYONsTpQdEDTwt00nE2MxLRMkAZMg/viewform" target="_blank" rel="noreferrer">Agende agora</a>
-              </div>
-            </div>
-            <div class="program">
-              <div class="program-icon"><i class="bi bi-people"></i></div>
-              <div class="pill">Terapia Familiar</div>
-              <h3>Terapia Sistêmica</h3>
-              <p style="color: var(--muted);">A terapia sistêmica familiar tem como objetivo principal compreender e transformar as dinâmicas familiares e relacionais que influenciam o comportamento, os sentimentos e os padrões de vida dos indivíduos.</p>
-              <div class="expandable-content" style="display: none; margin-top: 1rem;">
-                <p style="color: var(--muted);">Ela parte do princípio de que todos fazemos parte de sistemas (família, relacionamentos, trabalho etc.) e que os problemas de uma pessoa muitas vezes estão ligados a desajustes nesses sistemas.</p>
-                <p style="color: var(--muted); margin-top: 1rem;"><strong>Principais objetivos da terapia sistêmica familiar:</strong></p>
-                <p style="color: var(--muted); margin-top: 0.75rem;"><strong>Compreender os padrões familiares repetitivos:</strong><br>Identificar comportamentos, crenças e padrões emocionais que se repetem entre gerações e que podem estar limitando ou adoecendo os membros da família.</p>
-                <p style="color: var(--muted); margin-top: 0.75rem;"><strong>Promover o equilíbrio nas relações:</strong><br>Ajudar os membros da família a encontrarem posições mais saudáveis dentro do sistema familiar (por exemplo, filhos não assumirem papéis parentais ou cônjuges não agirem como pais um do outro).</p>
-                <p style="color: var(--muted); margin-top: 0.75rem;"><strong>Curar traumas familiares:</strong><br>Trabalhar vivências difíceis (como perdas, separações, segredos, exclusões ou violências) que geram impactos profundos e inconscientes nos descendentes.</p>
-                <p style="color: var(--muted); margin-top: 0.75rem;"><strong>Fortalecer vínculos e comunicação:</strong><br>Melhorar a forma como os membros da família se comunicam e se relacionam, promovendo mais empatia, escuta e respeito mútuo.</p>
-                <p style="color: var(--muted); margin-top: 0.75rem;"><strong>Restaurar a ordem e pertencimento:</strong><br>Cada membro deve ocupar o seu lugar no sistema familiar. A terapia trabalha para que todos se sintam pertencentes, honrando suas origens e respeitando a ordem natural dos vínculos.</p>
-                <p style="color: var(--muted); margin-top: 0.75rem;"><strong>Gerar autoconhecimento e responsabilidade pessoal:</strong><br>Levar o indivíduo a reconhecer seu papel dentro dos sistemas em que está inserido e assumir responsabilidade pelas mudanças necessárias na sua vida.</p>
-                <p style="color: var(--muted); margin-top: 0.75rem;"><strong>Promover reconciliação e liberação de lealdades inconscientes:</strong><br>Identificar vínculos ocultos ou lealdades que nos mantêm presos a sofrimentos antigos, permitindo a liberação dessas amarras com amor e respeito.</p>
-              </div>
-              <div style="margin-top: auto; display: grid; gap: 0.75rem;">
-                <button class="btn btn-outline expand-toggle" style="width: 100%;" onclick="this.parentElement.previousElementSibling.style.display = this.parentElement.previousElementSibling.style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Saiba mais' ? 'Mostrar menos' : 'Saiba mais';">Saiba mais</button>
-                <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSezHQUfsIg9CBKVTF6CndYONsTpQdEDTwt00nE2MxLRMkAZMg/viewform" target="_blank" rel="noreferrer">Agende agora</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="program-group" id="produtos">
-          <div class="program-group-header">
-            <div>
-              <span class="pill">E-produtos</span>
-              <p style="color: var(--muted); margin: 6px 0 0;">Conteúdos gravados para assistir na plataforma quando quiser, com apoio de materiais extras.</p>
-            </div>
-          </div>
-          <div class="programs">
-            <div class="program highlight">
-              <div class="program-icon"><i class="bi bi-stars"></i></div>
-              <div class="pill">Programa 30 dias</div>
-              <h3>Programa de Reprogramação Vibracional – elevar sua energia</h3>
-              <p style="color: var(--muted);">Você está pronta para transformar sua vibração e despertar uma nova versão de si mesma?</p>
-              <p style="color: var(--muted); margin-top: 1rem;">Durante 30 dias, você será guiada por uma jornada profunda de reprogramação vibracional através de áudios terapêuticos especialmente criados para realinhar sua energia e abrir espaço para sentimentos de gratidão, otimismo e leveza.</p>
-              <div class="expandable-content" style="display: none; margin-top: 1rem;">
-                <p style="color: var(--muted);">Cada áudio atua de forma sutil e poderosa, utilizando os princípios da cura quântica e da frequência vibracional para dissolver bloqueios energéticos, harmonizar suas emoções e despertar uma nova consciência.</p>
-                <p style="color: var(--muted); margin-top: 1rem;">Com o tempo, você perceberá uma mudança natural na forma como sente, pensa e se relaciona com a vida — mais confiança, mais presença, mais paz interior.</p>
-                <p style="color: var(--muted); margin-top: 1rem;"><strong>✨ Durante os 30 dias, você vai:</strong></p>
-                <ul style="margin-bottom: 1rem;">
-                  <li>Reequilibrar sua energia emocional e mental</li>
-                  <li>Cultivar a gratidão como força transformadora</li>
-                  <li>Desenvolver uma visão mais positiva e amorosa sobre si mesma e o mundo</li>
-                  <li>Aprender a vibrar em frequências mais elevadas de alegria e serenidade</li>
-                  <li>Integrar práticas simples de autocuidado vibracional no seu dia a dia</li>
-                </ul>
-                <p style="color: var(--muted); font-style: italic;">Este programa é um convite para retornar à sua essência, realinhar-se com o fluxo da vida e criar uma nova realidade a partir da vibração do amor e da gratidão.</p>
-                <p style="color: var(--muted); margin-top: 1rem; font-weight: 500;">Respire fundo. Dê o primeiro passo. A transformação começa em você. ✨</p>
-              </div>
-              <div style="margin-top: auto; display: grid; gap: 0.75rem;">
-                <button class="btn btn-outline expand-toggle" style="width: 100%;" onclick="this.parentElement.previousElementSibling.style.display = this.parentElement.previousElementSibling.style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Saiba mais' ? 'Mostrar menos' : 'Saiba mais';">Saiba mais</button>
-                <a class="btn btn-primary" href="#contato">Quero transformar minha vibração</a>
-              </div>
-            </div>
-            <div class="program">
-              <div class="program-icon"><i class="bi bi-heart-fill"></i></div>
-              <div class="pill">Programa 30 dias</div>
-              <h3>Programa de Reprogramação Vibracional – despertar o amor-próprio e a autoconfiança</h3>
-              <p style="color: var(--muted);">Você já imaginou como seria viver sentindo-se inteira, confiante e em paz com quem você é?</p>
-              <p style="color: var(--muted); margin-top: 1rem;">O Programa de Reprogramação Vibracional foi criado para te conduzir a esse estado — um reencontro profundo com sua essência, com seu valor e com o poder que existe dentro de você.</p>
-              <div class="expandable-content" style="display: none; margin-top: 1rem;">
-                <p style="color: var(--muted);">Durante 30 dias, você será guiada por áudios terapêuticos desenvolvidos com técnicas de cura quântica e frequências vibracionais elevadas que atuam diretamente no seu campo energético, reprogramando crenças limitantes e despertando uma nova vibração de amor-próprio, segurança e autoconfiança.</p>
-                <p style="color: var(--muted); margin-top: 1rem;"><strong>💜 O que você vai vivenciar:</strong></p>
-                <ul style="margin-bottom: 1rem;">
-                  <li>Liberação de padrões energéticos que sabotam sua autoestima</li>
-                  <li>Reconexão com sua força interior e poder pessoal</li>
-                  <li>Reprogramação vibracional para vibrar em amor, segurança e merecimento</li>
-                  <li>Fortalecimento da autoconfiança e da clareza sobre quem você é</li>
-                  <li>Um novo olhar sobre si mesma — mais leve, compassivo e verdadeiro</li>
-                </ul>
-                <p style="color: var(--muted); margin-top: 1rem;"><strong>✨ Como funciona:</strong></p>
-                <p style="color: var(--muted);">Durante 30 dias, você ouvirá áudios quânticos exclusivos, cada um projetado para atuar em diferentes camadas da sua energia — emocional, mental e espiritual.</p>
-                <p style="color: var(--muted); margin-top: 1rem;">Com o passar dos dias, você sentirá a mudança acontecer naturalmente: mais confiança, mais amor por si mesma e uma sensação profunda de alinhamento com a vida.</p>
-                <p style="color: var(--muted); margin-top: 1rem;"><strong>🌸 Para quem é esse programa:</strong></p>
-                <p style="color: var(--muted);">Para mulheres que desejam se libertar das inseguranças e se reconectar com sua verdadeira essência. Para quem está pronta para se olhar com amor, se respeitar e se colocar em primeiro lugar — não por ego, mas por consciência.</p>
-                <p style="color: var(--muted); margin-top: 1rem; font-style: italic;">💫 Este é um convite para sua expansão: Durante 30 dias, você vai vibrar em amor e reconexão. Vai se lembrar do seu valor, da sua beleza e da sua luz.</p>
-                <p style="color: var(--muted); margin-top: 1rem; font-weight: 500;">💖 O amor-próprio é a base de toda transformação. E a sua começa agora.</p>
-              </div>
-              <div style="margin-top: auto; display: grid; gap: 0.75rem;">
-                <button class="btn btn-outline expand-toggle" style="width: 100%;" onclick="this.parentElement.previousElementSibling.style.display = this.parentElement.previousElementSibling.style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Saiba mais' ? 'Mostrar menos' : 'Saiba mais';">Saiba mais</button>
-                <a class="btn btn-primary" href="#contato">Despertar meu amor-próprio</a>
-              </div>
-            </div>
-            <div class="program">
-              <div class="program-icon"><i class="bi bi-coin"></i></div>
-              <div class="pill">Programa 30 dias</div>
-              <h3>Programa de Reprogramação Vibracional – ativar a prosperidade e a abundância na sua vida</h3>
-              <p style="color: var(--muted);">Você sente que faz muito esforço, mas os resultados não fluem como poderiam?</p>
-              <p style="color: var(--muted); margin-top: 1rem;">Muitas vezes, o que bloqueia a prosperidade não está fora — está na frequência interna que sustenta crenças, emoções e padrões inconscientes.</p>
-              <div class="expandable-content" style="display: none; margin-top: 1rem;">
-                <p style="color: var(--muted);">O Programa de Reprogramação Vibracional – Prosperidade e Abundância é uma jornada de 30 dias criada para realinhar sua energia com a frequência da abundância, utilizando áudios terapêuticos baseados nos princípios da cura quântica e da inteligência vibracional.</p>
-                <p style="color: var(--muted); margin-top: 1rem;">Durante esse processo, sua energia é trabalhada de forma profunda e gradual, abrindo espaço para uma nova relação com o dinheiro, com o merecimento e com o fluxo natural da vida.</p>
-                <p style="color: var(--muted); margin-top: 1rem;"><strong>✨ Como funciona</strong></p>
-                <p style="color: var(--muted);">Ao longo de 30 dias, você receberá áudios quânticos exclusivos, desenvolvidos para atuar no seu campo energético, liberando bloqueios relacionados à escassez e fortalecendo a vibração da prosperidade consciente.</p>
-                <p style="color: var(--muted); margin-top: 1rem;">Cada áudio atua em diferentes camadas — emocional, mental e energética — ajudando você a:</p>
-                <ul style="margin-bottom: 1rem;">
-                  <li>Ressignificar crenças limitantes sobre dinheiro e sucesso</li>
-                  <li>Ativar o sentimento interno de merecimento</li>
-                  <li>Alinhar sua energia ao fluxo da abundância</li>
-                  <li>Expandir sua consciência para receber mais com leveza</li>
-                </ul>
-                <p style="color: var(--muted); margin-top: 1rem;"><strong>💰 Benefícios que você vai vivenciar</strong></p>
-                <ul style="margin-bottom: 1rem;">
-                  <li>Sensação de abertura e fluidez na vida financeira</li>
-                  <li>Mudança na forma de pensar e sentir a prosperidade</li>
-                  <li>Mais confiança, clareza e segurança para tomar decisões</li>
-                  <li>Alinhamento com oportunidades e novos caminhos</li>
-                  <li>Relação mais leve e equilibrada com o dinheiro</li>
-                  <li>Expansão da consciência de abundância em todas as áreas da vida</li>
-                </ul>
-                <p style="color: var(--muted); margin-top: 1rem;"><strong>🌟 Para quem é este programa</strong></p>
-                <p style="color: var(--muted);">Este programa é para quem sente que está pronta para sair da escassez e vibrar em expansão. Para quem deseja prosperar sem culpa, sem medo e sem esforço excessivo. Para quem entende que a verdadeira abundância começa de dentro para fora.</p>
-                <p style="color: var(--muted); margin-top: 1rem; font-style: italic;"><strong>💫 Um convite à sua expansão</strong></p>
-                <p style="color: var(--muted);">A prosperidade não é apenas sobre dinheiro — é sobre fluxo, merecimento e alinhamento. Quando sua vibração muda, sua realidade responde. Durante 30 dias, você será guiada a vibrar em expansão, confiança e abundância.</p>
-                <p style="color: var(--muted); margin-top: 1rem; font-weight: 500;">✨ Permita-se receber. A abundância é o seu estado natural.</p>
-              </div>
-              <div style="margin-top: auto; display: grid; gap: 0.75rem;">
-                <button class="btn btn-outline expand-toggle" style="width: 100%;" onclick="this.parentElement.previousElementSibling.style.display = this.parentElement.previousElementSibling.style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Saiba mais' ? 'Mostrar menos' : 'Saiba mais';">Saiba mais</button>
-                <a class="btn btn-primary" href="#contato">Quero prosperar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="section-divider"></div>
-    </section>
-
-    <section class="section-alt" id="metodologia">
-      <div class="section-inner two-col">
-        <div>
-          <span class="pill">Como funciona</span>
-          <h2>Metodologia que une ciência do bem-estar e energia.</h2>
-          <p style="color: var(--muted);">Cada encontro segue um fluxo claro: acolhimento, leitura vibracional, prática ativa e integração. Você sai com planos simples para aplicar no cotidiano.</p>
-          <ul class="list">
-            <li><i class="bi bi-activity icon-bullet"></i><span>Diagnóstico suave: leitura de padrões e necessidades do momento.</span></li>
-            <li><i class="bi bi-wind icon-bullet"></i><span>Prática guiada: respiração, ancoragem, limpeza energética ou reprogramação.</span></li>
-            <li><i class="bi bi-check2-circle icon-bullet"></i><span>Plano de integração: micro hábitos e rituais curtos para manter a evolução.</span></li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Para quem é</h3>
-          <p style="color: var(--muted);">Pessoas que buscam alívio rápido de ansiedade, profissionais sob pressão, mulheres em transição de carreira ou vida, e quem deseja reconectar-se com propósito e autocuidado.</p>
-          <div class="badge-row">
-            <span class="badge">Online global</span>
-            <span class="badge">Presencial sob consulta</span>
-            <span class="badge">Atendimento confidencial</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="depoimentos">
-      <div class="section-inner">
-        <div class="section-header">
-          <div>
-            <span class="pill">Depoimentos</span>
-            <h2>Vozes de quem já viveu a experiência.</h2>
-          </div>
-        </div>
-        <div class="testimonial-carousel">
-          <div class="testimonial-track">
-            <div class="testimonial-item">
-              <div class="card quote">
-                <p>Obrigada Carol! Adorei! Me sentindo mais leve! Acho que limpamos muitas coisas que eu precisava limpar!</p>
-                <div class="quote-footer" aria-label="Avaliação">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6 text-white hero-content">
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000">
+                        Tenha sua própria<br>
+                        <span class="highlight-text">Franquia de Cafés Especiais</span>
+                    </h1>
+                    <h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                        E construa um negócio de <strong>alto potencial lucrativo!</strong>
+                    </h2>
+                    <p class="hero-investment" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                        Investimento a partir de <span class="investment-value">R$ 180 mil</span>
+                    </p>
+                    
+                    <div class="hero-features mt-5" data-aos="fade-up" data-aos-delay="800">
+                        <div class="row">
+                            <div class="col-md-4 feature-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Alta Rentabilidade</span>
+                            </div>
+                            <div class="col-md-4 feature-item">
+                                <i class="fas fa-handshake"></i>
+                                <span>Suporte Completo</span>
+                            </div>
+                            <div class="col-md-4 feature-item">
+                                <i class="fas fa-coffee"></i>
+                                <span>Cafés Especiais</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="testimonial-item">
-              <div class="card quote">
-                <p>Carol, muito obrigada! Eu amei! Sai fazendo várias reflexões. Eu estava precisando disso e não sabia. Gratidão! Me sentindo melhor, que seja o primeiro de muitos</p>
-                <div class="quote-footer" aria-label="Avaliação">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <div class="col-lg-6 hero-media" data-aos="fade-left" data-aos-delay="200">
+                    <div class="hero-models-showcase">
+                        <div class="model-image-main" data-aos="zoom-in" data-aos-delay="400">
+                            <img src="modelos/m1.png" alt="Modelo StreetMe" class="img-fluid">
+                            <div class="model-glow"></div>
+                        </div>
+                        <div class="model-image-accent" data-aos="zoom-in" data-aos-delay="600">
+                            <img src="modelos/m2.png" alt="Modelo StreetMe" class="img-fluid">
+                            <div class="model-glow-accent"></div>
+                        </div>
+                        <div class="hero-decoration-circle"></div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="testimonial-item">
-              <div class="card quote">
-                <p>Quero expressar minha mais profunda gratidão por todo cuidado, apoio e orientação que recebi durante meu trabalho contigo Carol! A jornada de cura que percorri ao teu lado foi transformadora e trouxe uma renovação na minha vida que eu jamais imaginei ser possível. Tem me feito refletir muito... Teu conhecimento, sensibilidade e dedicação fizeram toda a diferença no meu processo</p>
-                <div class="quote-footer" aria-label="Avaliação">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-item">
-              <div class="card quote">
-                <p>Oi Carol!!! Não tenho palavras para te agradecer a transformação, esclarecimento e a paz interior que os nossos encontros me trouxeram. Todas as sessões contigo foram tão prazerosas e esclarecedoras que após cada uma de nossas reuniões eu era tomada por uma sensação de clareza, inspiração e entusiasmo para aplicar em meus projetos pessoais! Impossível negar a evolução no que trabalhamos juntas!</p>
-                <div class="quote-footer" aria-label="Avaliação">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-dots" aria-label="Navegação de depoimentos">
-            
-          </div>
         </div>
-      </div>
     </section>
 
-    <section class="section-alt" id="faq">
-      <div class="section-inner">
-        <div class="section-header">
-          <div>
-            <span class="pill">FAQ</span>
-            <h2>Perguntas frequentes.</h2>
-          </div>
-        </div>
-        <div class="grid grid-cols-3">
-          <div class="card">
-            <h3>As sessões são online?</h3>
-            <p>Sim. Atendo online para qualquer lugar. Presencial disponível sob consulta.</p>
-          </div>
-          <div class="card">
-            <h3>Como funciona o pagamento?</h3>
-            <p>Pix ou cartão via link seguro após confirmação do horário.</p>
-          </div>
-          <div class="card">
-            <h3>Preciso ter experiência com terapias?</h3>
-            <p>Não. Conduzo cada passo com explicações simples e práticas.</p>
-          </div>
-          <div class="card">
-            <h3>Em quanto tempo vejo resultados?</h3>
-            <p>Muitos clientes sentem alívio na primeira sessão. A consolidação vem com continuidade.</p>
-          </div>
-          <div class="card">
-            <h3>Posso remarcar?</h3>
-            <p>Sim, com até 24h de antecedência sem custo adicional.</p>
-          </div>
-          <div class="card">
-            <h3>Quem não pode participar?</h3>
-            <p>Acompanhamento médico/psicológico é prioridade para quadros clínicos. Terapia integrativa é complementar.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contato">
-      <div class="section-inner two-col">
-        <div>
-          <span class="pill">Contato</span>
-          <h2>Pronta para começar?</h2>
-          <p style="color: var(--muted);">Envie uma mensagem e agende a melhor data. Retorno rápido.</p>
-          <div class="badge-row">
-            <span class="badge">Atendimento humanizado</span>
-            <span class="badge">Horários flexíveis</span>
-          </div>
-        </div>
-        <div class="card">
-          <form action="https://formspree.io/f/mvoydkko" method="POST" class="needs-validation" novalidate>
-            <div style="margin-bottom: 18px;">
-              <label for="nome" class="form-label" style="display: block; margin-bottom: 6px; font-size: 13px; color: var(--muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">Nome</label>
-              <input id="nome" name="nome" type="text" class="form-control custom-input" placeholder="Seu nome completo" required>
+    <!-- Investimento Section (moved up) -->
+    <section id="investimento" class="investimento-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Nosso Modelo de <span class="text-highlight">Negócio</span></h2>
+                <p class="lead">Uma oportunidade estruturada e lucrativa para empreendedores</p>
             </div>
-            <div style="margin-bottom: 18px;">
-              <label for="email" class="form-label" style="display: block; margin-bottom: 6px; font-size: 13px; color: var(--muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">Email</label>
-              <input id="email" name="email" type="email" class="form-control custom-input" placeholder="seu@email.com" required>
-            </div>
-            <div style="margin-bottom: 18px;">
-              <label for="mensagem" class="form-label" style="display: block; margin-bottom: 6px; font-size: 13px; color: var(--muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">Mensagem</label>
-              <textarea id="mensagem" name="mensagem" rows="5" class="form-control custom-input" placeholder="Conte um pouco sobre você e seu interesse..." required></textarea>
-            </div>
-            <button class="btn btn-primary w-100" type="submit" style="width: 100%; margin-top: 4px;">Enviar mensagem</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <div class="footer-grid">
-      <div>
-        <strong style="display: block; margin-bottom: 8px; color: var(--text);">Carol Fontanella</strong>
-        <small>Atendimento integrativo para equilíbrio emocional e energético. Online e presencial sob consulta.</small>
-        <div class="badge-row" style="margin-top:14px;">
-          <span class="footer-badge">Terapia integrativa</span>
-          <span class="footer-badge">Leitura vibracional</span>
-        </div>
-      </div>
-      <div>
-        <h4>Atendimentos</h4>
-        <div class="footer-list">
-          <a href="#atendimentos">Sessão Integrativa Premium</a>
-          <a href="#atendimentos">Jornada Autoconhecimento e Propósito</a>
-          <a href="#atendimentos">Terapia Sistêmica</a>
-        </div>
-      </div>
-      <div>
-        <h4>E-produtos</h4>
-        <div class="footer-list">
-          <a href="#produtos">Elevar sua energia</a>
-          <a href="#produtos">Despertar amor-próprio</a>
-          <a href="#produtos">Prosperidade e abundância</a>
-        </div>
-      </div>
-      <div>
-        <h4>Contato rápido</h4>
-        <div class="footer-list">
-          <a href="mailto:carolfontanella@gmail.com"><i class="bi bi-envelope-fill"></i> carolfontanella@gmail.com</a>
-          <a href="https://wa.me/5551994156995?text=Ol%C3%A1%20Carol,%20quero%20agendar%20uma%20sess%C3%A3o" target="_blank" rel="noreferrer"><i class="bi bi-whatsapp"></i> WhatsApp direto</a>
-          <a href="https://www.instagram.com/carol.fonta/" target="_blank" rel="noreferrer"><i class="bi bi-instagram"></i> Instagram</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-inner">
-      <small>© 2026 Carol Fontanella - Todos os direitos reservados.</small>
-    </div>
-    <div class="footer-developer">
-      <a href="http://glauberbarcelos.com.br" target="_blank" rel="noreferrer" class="developer-link">
-        <span>Desenvolvido por</span>
-        <img src="img/glauber/logo.png" alt="Glauber Barcelos" class="developer-logo">
-      </a>
-    </div>
-  </footer>
-
-  <a class="whatsapp-btn" href="https://wa.me/5551994156995?text=Ol%C3%A1%20Carol,%20quero%20agendar%20uma%20sess%C3%A3o" target="_blank" rel="noreferrer" aria-label="Fale no WhatsApp">
-    <i class="bi bi-whatsapp"></i>
-  </a>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Testimonials carousel
-      const carousel = document.querySelector('.testimonial-carousel');
-      if (carousel) {
-        const track = carousel.querySelector('.testimonial-track');
-        const items = Array.from(carousel.querySelectorAll('.testimonial-item'));
-        const dotsContainer = carousel.querySelector('.testimonial-dots');
-        let itemsPerView = 1;
-        let pages = 1;
-        let index = 0;
-        let timer;
-
-        function getItemsPerView() {
-          const w = window.innerWidth;
-          if (w >= 1200) return 4; // super wide
-          if (w >= 768) return 3;  // desktop
-          if (w >= 480) return 2;  // tablet
-          return 1;                // mobile
-        }
-
-        function buildDots() {
-          dotsContainer.innerHTML = '';
-          for (let i = 0; i < pages; i++) {
-            const btn = document.createElement('button');
-            btn.className = 'testimonial-dot';
-            btn.setAttribute('aria-label', 'Slide ' + (i + 1));
-            btn.addEventListener('click', () => slideTo(i));
-            dotsContainer.appendChild(btn);
-          }
-        }
-
-        function slideTo(i) {
-          index = (i + pages) % pages;
-          track.style.transform = 'translateX(' + (-index * 100) + '%)';
-          const dots = Array.from(dotsContainer.querySelectorAll('.testimonial-dot'));
-          dots.forEach((d, di) => d.classList.toggle('active', di === index));
-        }
-
-        function startTimer() {
-          clearInterval(timer);
-          timer = setInterval(() => slideTo(index + 1), 5000);
-        }
-
-        function setup() {
-          itemsPerView = getItemsPerView();
-          carousel.style.setProperty('--items-per-view', itemsPerView);
-          pages = Math.ceil(items.length / itemsPerView);
-          if (index >= pages) index = 0;
-          buildDots();
-          slideTo(index);
-          startTimer();
-        }
-
-        setup();
-        carousel.addEventListener('mouseenter', () => { clearInterval(timer); });
-        carousel.addEventListener('mouseleave', () => { startTimer(); });
-
-        let resizeTimer;
-        window.addEventListener('resize', () => {
-          clearTimeout(resizeTimer);
-          resizeTimer = setTimeout(setup, 150);
-        });
-      }
-
-      // Podcast auto-update (optional; requires channelId and CORS).
-      const podcastGrid = document.querySelector('.yt-grid');
-      const channelId = podcastGrid ? podcastGrid.dataset.channelId : '';
-      if (podcastGrid && channelId) {
-        const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
-        const proxy = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(rssUrl);
-
-        fetch(proxy)
-          .then(res => { if (!res.ok) throw new Error('RSS fetch failed'); return res.json(); })
-          .then(data => {
-            if (!data.items) throw new Error('No items');
-            podcastGrid.innerHTML = '';
-            data.items.slice(0, 8).forEach(item => {
-              const videoId = item.guid.replace('yt:video:', '');
-              const duration = item.duration ? new Date(item.duration * 1000).toISOString().substr(11, 8).replace(/^00:/, '') : '';
-              const card = document.createElement('a');
-              card.className = 'yt-card';
-              card.href = item.link;
-              card.target = '_blank';
-              card.rel = 'noreferrer';
-              const desc = item.description ? item.description.replace(/<[^>]+>/g, '').slice(0, 140) + '…' : '';
-              card.innerHTML = `
-                <div class="yt-thumb" style="background-image:url('https://img.youtube.com/vi/${videoId}/hqdefault.jpg');">
-                  <div class="yt-play"><i class="bi bi-play-circle"></i></div>
-                  <div class="yt-duration">${duration || ''}</div>
+            <!-- Investment Highlight -->
+            <div class="row mb-5">
+                <div class="col-lg-12" data-aos="fade-up">
+                    <div class="investment-hero-box">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5">
+                                <img src="modelos/m2.png" alt="Ambiente StreetMe" class="img-fluid rounded-3 shadow-lg">
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="investment-hero-content">
+                                    <h3 class="investment-title">Investimento a partir de</h3>
+                                    <div class="investment-value-display">
+                                        <span class="currency">R$</span>
+                                        <span class="value">180</span>
+                                        <span class="unit">mil</span>
+                                    </div>
+                                    <div class="investment-metrics">
+                                        <div class="metric-item">
+                                            <i class="fas fa-chart-line"></i>
+                                            <span>Faturamento: R$ 25-35 mil/mês</span>
+                                        </div>
+                                        <div class="metric-item">
+                                            <i class="fas fa-percentage"></i>
+                                            <span>Margem: 20% a 30%</span>
+                                        </div>
+                                        <div class="metric-item">
+                                            <i class="fas fa-calendar-check"></i>
+                                            <span>Payback: 18 meses</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="yt-body">
-                  <h3 class="yt-title">${item.title}</h3>
-                  <p class="yt-desc">${desc}</p>
-                  <div class="yt-meta">
-                    <span class="pill">Podcast</span>
-                    <span>${new Date(item.pubDate).toLocaleDateString('pt-BR')}</span>
-                  </div>
-                </div>`;
-              podcastGrid.appendChild(card);
-            });
-          })
-          .catch(err => console.warn('Fallback to static podcast cards:', err));
-      }
-    });
-  </script>
-  <script>
-    // Mobile menu toggle
-    const navToggler = document.getElementById('navbarToggler');
-    const navCollapse = document.getElementById('mainNav');
-    const navLinks = document.querySelectorAll('.nav-link');
+            </div>
 
-    console.log('Nav toggler found:', navToggler);
-    console.log('Nav collapse found:', navCollapse);
+            <!-- Financial Information Highlight Section -->
+            <div class="row mb-5" data-aos="zoom-in">
+                <div class="col-12">
+                    <div class="financial-highlight-section">
+                        <div class="text-center mb-4">
+                            <h3 class="financial-section-title"><i class="fas fa-dollar-sign me-2"></i>Informações Financeiras</h3>
+                            <p class="lead">Transparência e rentabilidade comprovada</p>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="financial-highlight-card">
+                                    <div class="financial-icon-large">
+                                        <i class="fas fa-coins"></i>
+                                    </div>
+                                    <h4>Royalties + Marketing</h4>
+                                    <div class="financial-value">5% + 2%</div>
+                                    <p>do faturamento mensal</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="financial-highlight-card featured">
+                                    <div class="featured-badge">Destaque</div>
+                                    <div class="financial-icon-large">
+                                        <i class="fas fa-chart-pie"></i>
+                                    </div>
+                                    <h4>Margem de Lucro</h4>
+                                    <div class="financial-value">20% - 30%</div>
+                                    <p>Rentabilidade líquida</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="financial-highlight-card">
+                                    <div class="financial-icon-large">
+                                        <i class="fas fa-undo"></i>
+                                    </div>
+                                    <h4>Retorno do Investimento</h4>
+                                    <div class="financial-value">18 meses</div>
+                                    <p>Payback estimado</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    if (navToggler) {
-      navToggler.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        this.classList.toggle('active');
-        navCollapse.classList.toggle('show');
-        console.log('Toggler clicked - Active:', this.classList.contains('active'), 'Show:', navCollapse.classList.contains('show'));
-      });
+            <!-- What's Included -->
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-up">
+                    <div class="info-card">
+                        <h4 class="text-center mb-5"><i class="fas fa-check-circle me-2"></i>O que está incluso no investimento</h4>
+                        <div class="row g-4">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="included-item"><i class="fas fa-check"></i> Taxa de franquia</div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="included-item"><i class="fas fa-check"></i> Projeto arquitetônico</div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="included-item"><i class="fas fa-check"></i> Enxoval de produtos</div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="included-item"><i class="fas fa-check"></i> Mobiliário completo</div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="included-item"><i class="fas fa-check"></i> Identidade visual</div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="included-item"><i class="fas fa-check"></i> Marketing de abertura</div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="included-item"><i class="fas fa-check"></i> Treinamento completo</div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="included-item"><i class="fas fa-check"></i> Suporte contínuo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      // Fechar menu ao clicar em um link
-      navLinks.forEach(link => {
-        link.addEventListener('click', function () {
-          navToggler.classList.remove('active');
-          navCollapse.classList.remove('show');
-        });
-      });
+            <!-- Franchisee Profiles -->
+            <div class="row mb-5" data-aos="fade-up">
+                <div class="col-12">
+                    <h3 class="text-center mb-4"><i class="fas fa-users me-2"></i>Qual é o seu perfil de franqueado?</h3>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="profile-card">
+                        <div class="profile-icon"><i class="fas fa-briefcase"></i></div>
+                        <h5>Investidor</h5>
+                        <p>Capital e visão de longo prazo, com operação conduzida por gestor profissional.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="profile-card">
+                        <div class="profile-icon"><i class="fas fa-user-tie"></i></div>
+                        <h5>Gestor</h5>
+                        <p>Comando total da unidade: metas agressivas, equipe e rotina na mão.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="profile-card">
+                        <div class="profile-icon"><i class="fas fa-coffee"></i></div>
+                        <h5>Gerente / Barista</h5>
+                        <p>Operação na veia: padrão impecável, atendimento e energia no dia a dia.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="profile-card">
+                        <div class="profile-icon"><i class="fas fa-network-wired"></i></div>
+                        <h5>Multifranqueado</h5>
+                        <p>Escala com inteligência: replicação de processos e gestão multiunidades.</p>
+                    </div>
+                </div>
+            </div>
 
-      // Fechar menu ao redimensionar para tela maior
-      window.addEventListener('resize', function () {
-        if (window.innerWidth > 768) {
-          navToggler.classList.remove('active');
-          navCollapse.classList.remove('show');
-        }
-      });
-    }
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-HoA4Z45gPXgC7cmk6VwBEm90LkAMPx/+qvOB0fOkH1ZZ1xdjQbaO5SpM90+hCbGy" crossorigin="anonymous"></script>
+            <!-- Locations -->
+            <div class="row" data-aos="fade-up">
+                <div class="col-12">
+                    <div class="locations-card">
+                        <h4><i class="fas fa-map-marker-alt me-2"></i>Locais Estratégicos</h4>
+                        <div class="locations-tags">
+                            <span class="location-tag"><i class="fas fa-shopping-bag"></i> Shoppings</span>
+                            <span class="location-tag"><i class="fas fa-store-alt"></i> Galerias</span>
+                            <span class="location-tag"><i class="fas fa-road"></i> Lojas de Rua</span>
+                            <span class="location-tag"><i class="fas fa-building"></i> Centros Comerciais</span>
+                            <span class="location-tag"><i class="fas fa-graduation-cap"></i> Universidades</span>
+                            <span class="location-tag"><i class="fas fa-hospital"></i> Hospitais</span>
+                            <span class="location-tag"><i class="fas fa-plane"></i> Aeroportos</span>
+                            <span class="location-tag"><i class="fas fa-users"></i> Alta Circulação</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto" data-aos="zoom-in">
+                    <div class="cta-box">
+                        <h3>Pronto para começar?</h3>
+                        <p>Entre em contato e descubra como se tornar um franqueado StreetMe</p>
+                        <a href="#contato" class="btn btn-primary btn-lg">
+                            <i class="fas fa-handshake me-2"></i>Quero Ser Franqueado
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modelos de Operação Section -->
+    <section id="modelos-operacao" class="modelos-operacao-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Modelos de <span class="text-highlight">Operação</span></h2>
+                <p class="lead">Escolha o formato ideal para o seu negócio</p>
+            </div>
+
+            <!-- Business Models Grid -->
+            <div class="row mb-5" data-aos="fade-up">
+                <div class="col-md-4">
+                    <div class="model-card">
+                        <div class="model-image">
+                            <img src="modelos/m2.png" alt="Modelo Container" class="img-fluid">
+                        </div>
+                        <h4>Container</h4>
+                        <div class="model-size">9m²</div>
+                        <p>Modelo compacto e eficiente para alta circulação</p>
+                        <div class="model-price">A partir de R$ 180 mil</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="model-card">
+                        <div class="model-image">
+                            <img src="modelos/m3.png" alt="Modelo Quiosque" class="img-fluid">
+                        </div>
+                        <h4>Quiosque</h4>
+                        <div class="model-size">12m²</div>
+                        <p>Espaço intermediário com flexibilidade operacional</p>
+                        <div class="model-price">Investimento variável</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="model-card">
+                        <div class="model-image">
+                            <img src="modelos/m4.png" alt="Modelo Standard" class="img-fluid">
+                        </div>
+                        <h4>Standard</h4>
+                        <div class="model-size">20m²</div>
+                        <p>Loja completa para operação expandida</p>
+                        <div class="model-price">Investimento variável</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-5" data-aos="fade-up">
+                        <h2 class="section-title">Veja a <span class="text-highlight">StreetMe</span> em ação</h2>
+                        <p class="lead">Conheça nosso modelo de negócio e histórias de sucesso</p>
+                    </div>
+                    <div class="video-container" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="video-wrapper">
+                            <iframe 
+                                src="https://www.youtube.com/embed/2IjZPw4y2NE" 
+                                title="StreetMe - Franquia de Cafés Especiais" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mercado de Café Especial -->
+    <section class="coffee-market-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title">Por que investir em <span class="text-highlight">Cafés Especiais?</span></h2>
+                    <p class="lead">O mercado de café no Brasil é dinâmico e lucrativo, com crescimento acelerado no segmento de cafés especiais onde a StreetMe se posiciona. <small class="text-muted">(Fonte: ABIC - Associação Brasileira da Indústria de Café, 2024)</small></p>
+                    <ul class="market-benefits">
+                        <li><i class="fas fa-arrow-right me-3"></i><strong>Mercado de R$ 36,8 bilhões</strong> com crescimento de 60,85% em faturamento <small class="text-muted">(ABIC, 2024)</small></li>
+                        <li><i class="fas fa-arrow-right me-3"></i><strong>Consumo per capita alto:</strong> 3,6 kg/ano (1.435 xícaras por cidadão) <small class="text-muted">(ABIC, 2024)</small></li>
+                        <li><i class="fas fa-arrow-right me-3"></i><strong>Cafés especiais:</strong> segmento de maior valor agregado, com margens superiores e crescimento consistente <small class="text-muted">(SCA Brasil, 2024)</small></li>
+                        <li><i class="fas fa-arrow-right me-3"></i><strong>Consumidor consciente</strong> disposto a pagar 40-200% mais por café certificado e sustentável <small class="text-muted">(Euromonitor, 2024)</small></li>
+                        <li><i class="fas fa-arrow-right me-3"></i><strong>Tendência de sustentabilidade</strong> e rastreabilidade valorizada no mercado de cafés especiais <small class="text-muted">(SCA Brasil, 2024)</small></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="market-highlight">
+                        <div class="market-stat">
+                            <h3>R$ 36,8 Bi</h3>
+                            <p>Mercado total de café (2024)</p>
+                        </div>
+                        <div class="market-stat">
+                            <h3>+60,85%</h3>
+                            <p>Crescimento em faturamento (2023-2024)</p>
+                        </div>
+                        <div class="market-stat">
+                            <h3>215M</h3>
+                            <p>Potencial consumidor Brasil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Franchising Market Stats -->
+            <div class="row mt-5 pt-4">
+                <div class="col-lg-12" data-aos="fade-up">
+                    <div class="franchising-highlight-box">
+                        <div class="franchising-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-center mb-4">O Mercado de Franquias no Brasil</h3>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="franchise-stat">
+                                    <h4>R$ 273 Bi</h4>
+                                    <p>Faturamento das franquias em 2024</p>
+                                    <span class="growth-badge">+13,5%</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="franchise-stat">
+                                    <h4>R$ 46,8 Bi</h4>
+                                    <p>Serviços de alimentação</p>
+                                    <span class="growth-badge">+16,1%</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="franchise-stat-text">
+                                    <p><strong>Em 2024, o faturamento das franquias superou a marca de 273 bilhões de reais, crescimento de 13,5% sobre o ano anterior. O segmento de serviço de alimentação cresceu 16,1%, alcançando 46,8 bilhões de reais.</strong></p>
+                                    <p class="source-text"><small class="text-muted">Fonte: ABF (Pesquisa Desempenho do Franchising 2024)</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market Opportunities Subsection -->
+            <div class="row mt-5 pt-5 border-top">
+                <div class="col-lg-10 mx-auto" data-aos="fade-up">
+                    <h3 class="text-center mb-4">Oportunidades de Crescimento no Mercado</h3>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="opportunity-card">
+                                <i class="fas fa-star"></i>
+                                <h5>Cafés de Pontuação Elevada</h5>
+                                <p>Cafés especiais com pontuação acima de 80 pontos têm alta demanda. Qualidade sensorial diferenciada atrai consumidores exigentes e gera fidelização. <small class="text-muted">(SCA Brasil, 2024)</small></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="opportunity-card">
+                                <i class="fas fa-leaf"></i>
+                                <h5>Consumidor Sustentável</h5>
+                                <p>Demanda crescente por cafés especiais certificados. Prêmio de preço validado. Certificações (UTZ, Rainforest, Orgânico) agregam valor. <small class="text-muted">(Fair Trade, 2024)</small></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="opportunity-card">
+                                <i class="fas fa-coffee"></i>
+                                <h5>Experiência em Cafetaria</h5>
+                                <p>Tendência global em alta. Cafés especiais de origem rastreável criam conexão emocional com cliente. Fidelização garantida através da qualidade sensorial. <small class="text-muted">(SCAA, 2024)</small></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="opportunity-card">
+                                <i class="fas fa-chart-line"></i>
+                                <h5>Distribuição Direta</h5>
+                                <p>Pequenas torrefações de cafés especiais crescem e representam 51% do mercado. E-commerce e modelos de assinatura têm alto potencial. <small class="text-muted">(BSCA, 2024)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais Section -->
+    <section id="diferenciais" class="diferenciais-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Por que investir na <span class="text-highlight">StreetMe?</span></h2>
+                <p class="lead">Diferenciais que garantem o sucesso do seu negócio</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="diferencial-card">
+                        <div class="icon-box">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h4>Primeiro lote de café gratuito para a Inauguração</h4>
+                        <p>Comece sua operação com estoque completo para o grande dia</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="diferencial-card">
+                        <div class="icon-box">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>Processos Validados</h4>
+                        <p>Sistema operacional testado e aprovado em dezenas de unidades</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="diferencial-card">
+                        <div class="icon-box">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>Operação Simplificada</h4>
+                        <p>Modelo de negócio eficiente e fácil de gerenciar</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="diferencial-card">
+                        <div class="icon-box">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Cafés Especiais de Alta Qualidade</h4>
+                        <p>Cafés especiais selecionados e alimentos de qualidade superior que conquistam todos os paladares</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="diferencial-card">
+                        <div class="icon-box">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h4>Alta Rentabilidade</h4>
+                        <p>Margens de lucro excelentes com retorno rápido do investimento</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="diferencial-card">
+                        <div class="icon-box">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h4>Suporte Completo</h4>
+                        <p>Acompanhamento desde a escolha do ponto até o pós-inauguração</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="diferencial-card">
+                        <div class="icon-box">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h4>Distribuição de Produtos</h4>
+                        <p>Logística eficiente para garantir produtos sempre frescos</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="diferencial-card">
+                        <div class="icon-box">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Treinamento Completo</h4>
+                        <p>Capacitação para você e sua equipe operarem com excelência</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="diferencial-card">
+                        <div class="icon-box">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h4>Marketing Estruturado</h4>
+                        <p>Campanhas nacionais e suporte para ações locais</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- História Section -->
+    <section id="historia" class="historia-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="text-center mb-5" data-aos="fade-up">
+                        <h2 class="section-title">Nossa <span class="text-highlight">História</span></h2>
+                        <p class="lead">Uma trajetória de paixão pelo café, inovação e compromisso com excelência</p>
+                    </div>
+                    
+                    <div class="historia-content">
+                        <div class="mvi-container">
+                            <div class="mvi-card" data-aos="fade-up" data-aos-delay="100">
+                                <h4><i class="fas fa-bullseye me-2"></i>Missão</h4>
+                                <p>Impulsionar a vida das pessoas por meios dos cafés especiais.</p>
+                            </div>
+                            <div class="mvi-card" data-aos="fade-up" data-aos-delay="200">
+                                <h4><i class="fas fa-eye me-2"></i>Visão</h4>
+                                <p>Construir uma rede sólida de cafeterias com franqueados satisfeitos.</p>
+                            </div>
+                            <div class="mvi-card" data-aos="fade-up" data-aos-delay="300">
+                                <h4><i class="fas fa-heart me-2"></i>Valores</h4>
+                                <p>Experiência de consumo, Tecnologia e Inovação, Praticidade, Qualidade.</p>
+                            </div>
+                        </div>
+                    
+                    <div class="historia-content mt-5">
+                        <div class="row align-items-center mb-5" data-aos="fade-right">
+                            <div class="col-md-6 order-md-1 order-2">
+                                <div class="historia-text-box">
+                                    <div class="year-badge">2018</div>
+                                    <h3>O Início de Tudo</h3>
+                                    <p>A StreetMe nasceu da paixão de empreendedores visionários que identificaram uma oportunidade única no mercado brasileiro: oferecer uma experiência de cafés especiais de alta qualidade em locais estratégicos. Com grãos especiais cuidadosamente selecionados e um conceito inovador.</p>
+                                    <p>O diferencial estava na combinação perfeita entre qualidade sensorial dos cafés especiais, ambiente acolhedor e um modelo de negócio eficiente. Trabalhamos exclusivamente com grãos de pontuação elevada cultivados na Fazenda São Benedita, localizada na Serra da Mantiqueira, sem cápsulas, valorizando a experiência autêntica do café.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 order-md-2 order-1 mb-4 mb-md-0">
+                                <div class="historia-image-wrapper" data-aos="zoom-in" data-aos-delay="200">
+                                    <img src="img/produtos/IMG_2432.jpeg" alt="Início da StreetMe" class="img-fluid rounded shadow-lg">
+                                    <div class="image-decoration"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center mb-5" data-aos="fade-left">
+                            <div class="col-md-6 order-2">
+                                <div class="historia-text-box">
+                                    <div class="year-badge">2020</div>
+                                    <h3>Expansão e Consolidação</h3>
+                                    <p>Com o sucesso da primeira unidade, iniciamos nossa jornada de expansão. Mesmo em um período desafiador para o mercado, a StreetMe se destacou pela resiliência e inovação, implementando delivery próprio, novos produtos e fortalecendo nossa presença digital.</p>
+                                    <p>Nossa rede expandiu-se consolidando a marca em diferentes regiões e provando a solidez do modelo de negócio. Cada nova unidade reforca nosso compromisso com a qualidade e a satisfação do cliente.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 order-1 mb-4 mb-md-0">
+                                <div class="historia-image-wrapper" data-aos="zoom-in" data-aos-delay="200">
+                                    <img src="img/produtos/IMG_0340.jpg" alt="Expansão StreetMe" class="img-fluid rounded shadow-lg">
+                                    <div class="image-decoration"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center mb-5" data-aos="fade-right">
+                            <div class="col-md-6 order-md-1 order-2">
+                                <div class="historia-text-box">
+                                    <div class="year-badge">2022</div>
+                                    <h3>Modelo de Franquia</h3>
+                                    <p>Após validar nosso modelo operacional e alcançar resultados consistentes, demos início ao programa de franquias. Nossa missão era clara: permitir que empreendedores realizassem o sonho de ter o próprio negócio com o suporte de uma marca forte e processos comprovados.</p>
+                                    <p>Desenvolvemos um sistema completo de treinamento, suporte operacional e marketing, garantindo que cada franqueado tivesse todas as ferramentas necessárias para o sucesso.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 order-md-2 order-1 mb-4 mb-md-0">
+                                <div class="historia-image-wrapper" data-aos="zoom-in" data-aos-delay="200">
+                                    <img src="img/produtos/IMG_2567.PNG" alt="Franquias StreetMe" class="img-fluid rounded shadow-lg">
+                                    <div class="image-decoration"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center" data-aos="fade-up">
+                            <div class="col-md-12">
+                                <div class="historia-text-box historia-atual">
+                                    <div class="year-badge">2026</div>
+                                    <h3>O Presente e o Futuro</h3>
+                                    <p>Hoje, a StreetMe é referência no segmento de cafeterias de cafés especiais e uma base sólida de clientes fiéis. Nossa rede de franqueados cresce continuamente, com histórias de sucesso que nos motivam a ir ainda mais longe.</p>
+                                    <p>Mantemos o foco na inovação constante do cardápio, na excelência do atendimento e na sustentabilidade da cadeia produtiva. Investimos em tecnologia para otimizar operações e melhorar a experiência do cliente em todos os pontos de contato.</p>
+                                    <p class="mb-0"><strong>Nosso compromisso é continuar crescendo de forma sustentável, levando a experiência de café especial brasileiro para cada vez mais pessoas, enquanto apoiamos nossos franqueados a alcançarem seus objetivos de sucesso.</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Gallery Section -->
+    <section id="produtos" class="products-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Nossos <span class="text-highlight">Produtos</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="product-card">
+                        <img src="img/produtos/01.jpg" alt="Produto 1" class="img-fluid">
+                        <div class="product-overlay">
+                            <h4>Cafés Especiais</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="product-card">
+                        <img src="img/produtos/02.jpg" alt="Produto 2" class="img-fluid">
+                        <div class="product-overlay">
+                            <h4>Bebidas Geladas</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="product-card">
+                        <img src="img/produtos/03.jpg" alt="Produto 3" class="img-fluid">
+                        <div class="product-overlay">
+                            <h4>Doces & Salgados</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Passo a Passo Section -->
+    <section id="processo" class="processo-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Como se tornar um <span class="text-highlight">Franqueado</span></h2>
+                <p class="lead">Processo simples e transparente em 6 etapas</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                            <div class="timeline-marker">1</div>
+                            <div class="timeline-content">
+                                <h4>Cadastro Inicial</h4>
+                                <p>Preencha o formulário com suas informações e preferências de investimento.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                            <div class="timeline-marker">2</div>
+                            <div class="timeline-content">
+                                <h4>Análise de Perfil</h4>
+                                <p>Nossa equipe analisa seu perfil e entra em contato para agendar uma reunião.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                            <div class="timeline-marker">3</div>
+                            <div class="timeline-content">
+                                <h4>Apresentação do Negócio</h4>
+                                <p>Conheça em detalhes o modelo de negócio, números e oportunidades.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+                            <div class="timeline-marker">4</div>
+                            <div class="timeline-content">
+                                <h4>Escolha do Ponto</h4>
+                                <p>Apoio na escolha e aprovação do ponto comercial ideal para sua unidade.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-right" data-aos-delay="500">
+                            <div class="timeline-marker">5</div>
+                            <div class="timeline-content">
+                                <h4>Implantação</h4>
+                                <p>Acompanhamento completo da obra, montagem e treinamento da equipe.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-left" data-aos-delay="600">
+                            <div class="timeline-marker">6</div>
+                            <div class="timeline-content">
+                                <h4>Inauguração</h4>
+                                <p>Suporte total na inauguração e acompanhamento nos primeiros meses.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Perguntas <span class="text-highlight">Frequentes</span></h2>
+                <p class="lead">Tire suas dúvidas sobre a franquia</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Onde é produzido o café especial da StreetMe?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Nosso café é produzido na Fazenda São Benedito, localizada em Carmo de Minas (MG) na região da Serra da Mantiqueira. A combinação do manejo, com a altitude entre 900 e 1200 metros e um terroir diferenciado, produz safras de cafés que não podem ser encontradas em nenhum outro lugar.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Em quais cidades eu posso abrir uma franquia da StreetMe?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Em todos os municípios do Brasil. Não temos limitação de logística ou de atuação.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    O que contempla esse valor de investimento a partir de R$ 180 mil?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Esse valor é a soma da taxa de franquia com o custo de obra para a execução do projeto da unidade.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Qual é o valor da taxa de franquia?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    A taxa de franquia atualmente, em 2025, é de R$ 45 mil.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    Por que investir em uma franquia de cafés especiais?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    O brasileiro consumiu mais de 570 mil quilos de cafés especiais no Brasil em 2023. A projeção indica que o consumo em 2024 passou de 600 mil quilos (fonte: ABIC).
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    Quais são os modelos de negócios?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Temos quatro modelos de negócios, são eles: TO GO, lojas pequenas, onde o consumir compra e segue sua viagem com o nosso café; CONTAINER, lojas construídas dentro de containers aproveitando a área interna para a estrutura e um espaço externo para o serviço e atendimento; QUIOSQUE, pontos ideais para locais de grande rotatividade de pessoas como shoppings ou grandes galerias; STANDARD, lojas um pouco maiores em que os clientes possam sentar e desfrutar não apenas do café, mas todo o ambiente.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Form Section -->
+    <section id="contato" class="contato-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title">Pronto para <span class="text-highlight">transformar seu futuro?</span></h2>
+                    <p class="lead mb-4">Preencha o formulário e nossa equipe entrará em contato para apresentar essa oportunidade única de investimento.</p>
+                    <div class="contact-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Atendimento personalizado</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Análise de viabilidade gratuita</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Material completo sobre a franquia</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Visita a unidades em operação</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="contact-form-card">
+                        <h3 class="text-center mb-4">Seja um Franqueado</h3>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome Completo *</label>
+                                <input type="text" class="form-control" id="nome" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="telefone" class="form-label">Telefone/WhatsApp *</label>
+                                    <input type="tel" class="form-control" id="telefone" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="cidade" class="form-label">Cidade *</label>
+                                    <input type="text" class="form-control" id="cidade" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="estado" class="form-label">Estado *</label>
+                                    <select class="form-select" id="estado" required>
+                                        <option value="">Selecione...</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="capital" class="form-label">Capital Disponível *</label>
+                                    <select class="form-select" id="capital" required>
+                                        <option value="">Selecione...</option>
+                                        <option value="180-250">R$ 180 a 250 mil</option>
+                                        <option value="250-350">R$ 250 a 350 mil</option>
+                                        <option value="500+">Acima de R$ 500 mil</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="horario" class="form-label">Melhor horário para contato</label>
+                                <select class="form-select" id="horario">
+                                    <option value="">Selecione...</option>
+                                    <option value="manha">Manhã (8h - 12h)</option>
+                                    <option value="tarde">Tarde (12h - 18h)</option>
+                                    <option value="noite">Noite (18h - 20h)</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label">Mensagem (opcional)</label>
+                                <textarea class="form-control" id="mensagem" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                <i class="fas fa-paper-plane me-2"></i>Enviar Cadastro
+                            </button>
+                            <p class="text-center mt-3 small">
+                                <i class="fas fa-lock me-1"></i>Seus dados estão seguros conosco
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js?v=20260127"></script>
 </body>
 </html>
